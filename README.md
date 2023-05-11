@@ -4,7 +4,7 @@
 A simple RPN calculator written in C.
 
 ## About
-This program accepts a normal infix expression (without whitespace), convert it into the RPN (Reverse Polish Notation), and calculate the result.
+This program accepts a normal infix expression, convert it into the RPN (Reverse Polish Notation), and calculate the result.
 
 This calculator accepts the following operators: `'+', '-', '*', '/', '%'`, and also accepts grouping and precending with parentheses.
 
