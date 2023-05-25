@@ -165,7 +165,7 @@ void traverse(char *input)
 	char *found;
 	found = input;
 	while (found != NULL) {
-		found = substr_char(found, ")(", "*");
+		found = substr_char(found, "(", "*");
 	}
 	
 	found = input;
@@ -213,13 +213,16 @@ char *substr_char(char *st, char *subst, char *c)
 			}
 		}
 		break;
-	case ')':
+	case '(':
 		if (loc) {
-			// put '*' between a pair of brackets
-			loc++;
-			memmove(loc + 1, loc, strlen(loc) + 1);
-			*loc = *c;
-			loc++;
+			// put '*' between a pair of brackets or a number and a left bracket
+			if (*prev == ')' || isdigit(*prev)) {
+				memmove(loc + 1, loc, strlen(loc) + 1);
+				*loc = *c;
+				loc += nbytes + 1;
+			} else {
+				loc++;
+			}
 		}
 		break;
 	}
