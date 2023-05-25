@@ -2,7 +2,7 @@
  * Personal project - A simple reverse polish notation calculator.
  *
  * File name: calc.c
- * Desc.: define functions which modify the stacks for calclation.
+ * Desc.: define functions which modify the stacks for calculations.
  */
 
 #include "calc.h"
