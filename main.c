@@ -68,17 +68,17 @@ int main(int argc, char **argv)
 		}
 	}
 	
-	// enter input equation
+	// enter an input equation
 	get_equation("Input=>", input, MAX_EQ_SIZE);
 	
 	// traverse the string and do necessary modifications
-	// e.g. unary '-a' to '(0-a)', '(a)(b)' to '(a)*(b)'
+	// e.g. unary '-a' to '(0-a)', '(a)(b)' to '(a)*(b)', 'a(b)' to 'a * (b)'
 	// currently no specific priority is set for parenthesis multiplication (just treat as a normal '*')
 	if (dbg) printf("\nTraversing input: ");
 	traverse(input);
 	if (dbg) printf("%s\n\n", input);
 	
-	// parse the input and convert it to RPN onto `num_stack`
+	// parse the input and convert it to RPN and push onto `num_stack`
 	if (dbg) printf("Parsing the input...\n\n");
 	parse(input);
 	

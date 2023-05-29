@@ -75,7 +75,7 @@ int get_string(char *prompt, char *buffer, int size)
 /*
  * `trim()` function
  *
- * Desc.: trim any whitespace in the string.
+ * Desc.: trim whitespaces in a string.
  * Parameters: input string
  * Return value: none
  */

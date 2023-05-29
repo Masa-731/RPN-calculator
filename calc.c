@@ -11,7 +11,7 @@
 /*
  * `print_stack()` function
  *
- * Desc.: print the stack specified by `stack_type` (defined in `calc.h`).
+ * Desc.: print a stack specified by `stack_type` (defined in `calc.h`).
  * Parameters: stack type
  * Return value: none
  */
@@ -53,7 +53,7 @@ void print_stack(stack_t stack_type)
 /*
  * `parse()` function
  *
- * Desc.: parse the input string and create RPN tree.
+ * Desc.: parse an input string and create RPN tree.
  * Parameters: input string
  * Return value: none
  */
@@ -85,7 +85,7 @@ void parse(char *ch)
 /*
  * `calculate()` function
  *
- * Desc.: calculate the equation in RPN notation.
+ * Desc.: calculate an equation in RPN notation.
  * Parameters: none
  * Return value: answer of the input equation
  */
@@ -175,8 +175,8 @@ int calculate()
 /*
  * `push_token()` function
  *
- * Desc.: receive a token object and push it into the specified stack.
- * Parameters: pointer to the destination stack, pointer to the token to push
+ * Desc.: receive a token object and push it into a specified stack.
+ * Parameters: pointer to a destination stack, pointer to a token to push
  * Return value: none
  */
 void push_token(token_t *dst_stack_head, token_t *token)
@@ -193,7 +193,7 @@ void push_token(token_t *dst_stack_head, token_t *token)
 /*
  * `push_num()` function
  *
- * Desc.: create a token with a numerical number and push it into `num_stack`.
+ * Desc.: create a token with a numeric number and push it into `num_stack`.
  * Parameters: number value
  * Return value: none
  */
@@ -310,9 +310,9 @@ L_push_op:
 /*
  * `pop()` function
  *
- * Desc.: pop a token from the specified stack and return a pointer to the popped token.
- * Parameters: pointer to the source stack
- * Return value: pointer to the popped token
+ * Desc.: pop a token from a specified stack and return a pointer to a popped token.
+ * Parameters: pointer to a source stack
+ * Return value: pointer to a popped token
  */
 token_t *pop(token_t *src_stack_head)
 {
@@ -331,9 +331,9 @@ token_t *pop(token_t *src_stack_head)
 /*
  * `get_stack_top()` function
  *
- * Desc.: return a pointer to a top of the specified stack.
- * Parameters: pointer to the source stack
- * Return value: pointer to the top of the stack
+ * Desc.: return a pointer to the top of a specified stack.
+ * Parameters: pointer to a source stack
+ * Return value: pointer to the top of a source stack
  */
 token_t *get_stack_top(token_t *src_stack_head)
 {
